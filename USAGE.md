@@ -8,14 +8,14 @@
 
 Endpoint: localhost:8080/characters
 
-Request body:
+Example Request body:
 ```
 {
     "name" : "a name",
-    "homePlanetId" : id,
+    "homePlanetId" : 1,
     "starships" : [
-        id1,
-        id2,
+        1,
+        2,
         ...
     ]
 }
@@ -23,11 +23,15 @@ Request body:
 
 ### Get
 
+#### get all characters
+
+Endpoint: localhost:8080/characters
+
 #### get character by id
 
 Endpoint: localhost:8080/characters?id={id}
 
-### get character by name
+#### get character by name
 
 Endpoint: localhost:8080/characters/find?name={name}
 
@@ -37,14 +41,14 @@ Endpoint: localhost:8080/characters/find?name={name}
 
 Endpoint: localhost:8080/characters?id={id}
 
-Request body:
+
+Example Request body:
 ```
 {
-    "name" : "a name",
-    "homePlanetId" : id,
+    "name" : "a new name",
+    "homePlanetId" : 3,
     "starships" : [
-        id1,
-        id2,
+        2,
         ...
     ]
 }
@@ -58,10 +62,9 @@ Request body:
 ```
 {
     "name" : "a name",
-    "homePlanetId" : id,
+    "homePlanetId" : 3,
     "starships" : [
-        id1,
-        id2,
+        2,
         ...
     ]
 }
@@ -97,11 +100,15 @@ Example Request body:
 
 ### Get
 
+#### get all planets
+
+Endpoint: localhost:8080/planets
+
 #### get planet by id
 
 Endpoint: localhost:8080/planets?id={id}
 
-### get planet by name
+#### get planet by name
 
 Endpoint: localhost:8080/planets/find?name={name}
 
@@ -165,11 +172,15 @@ Example Request body:
 
 ### Get
 
+#### get all starships
+
+Endpoint: localhost:8080/starships
+
 #### get starship by id
 
 Endpoint: localhost:8080/starships?id={id}
 
-### get starship by name
+#### get starship by name
 
 Endpoint: localhost:8080/starships/find?name={name}
 
@@ -199,7 +210,7 @@ Example Request body:
 {
     "name" : "a name",
     "model" : "a model",
-    "costInCredits" : 500.00
+    "costInCredits" : 500
 }
 ```
 
