@@ -28,7 +28,7 @@ public class StarWarsCharacterService {
     /** Service for creating a new StarWarsCharacter
      * @param character StarWarsCharacter we want to persist
      * @throws BadRequestException Exception thrown for custom validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     public void save(StarWarsCharacter character) throws BadRequestException, ConflictException {
         // My 409 error is more appropriate than the auto-generated 500 errors for character name and homePlanetId
@@ -66,7 +66,7 @@ public class StarWarsCharacterService {
      * @param id id of StarWarsCharacter we want to modify
      * @param character StarWarsCharacter that contains the data we want to modify
      * @throws BadRequestException Exception thrown for custom validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     public void updateById(Integer id, StarWarsCharacter character) throws BadRequestException, ConflictException {
         // Verify that the character to update exists
@@ -86,7 +86,7 @@ public class StarWarsCharacterService {
     /** Service for updating StarWarsCharacter by name
      * @param character StarWarsCharacter that contains the data we want to modify
      * @throws BadRequestException Exception thrown for custom validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     public void updateByName(StarWarsCharacter character) throws BadRequestException, ConflictException {
         // Verify that the character to update exists

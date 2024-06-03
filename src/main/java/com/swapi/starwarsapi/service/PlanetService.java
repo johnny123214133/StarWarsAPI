@@ -19,7 +19,7 @@ public class PlanetService {
 
     /** Service for creating a new Planet
      * @param planet Planet we want to persist
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     public void save(Planet planet) throws ConflictException {
         // I want to intercept records with duplicate names.
@@ -54,7 +54,7 @@ public class PlanetService {
     /** Service for updating Planet by id
      * @param id id of Planet we want to modify
      * @param planet Planet that contains the data we want to modify
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     public void updateById(Integer id, Planet planet) throws ConflictException {
         // My 409 error is more appropriate than the auto-generated 500 error.
@@ -64,7 +64,7 @@ public class PlanetService {
 
     /** Service for updating Planet by name
      * @param planet Planet that contains the data we want to modify
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     public void updateByName(Planet planet) throws ConflictException {
         // My 409 error is more appropriate than the auto-generated 500 error.

@@ -27,7 +27,7 @@ public class StarshipController {
     /** Handler for post / request
      * @param starship The starship entity we are persisting (model.Starship)
      * @throws BadRequestException Exception thrown for custom request body validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
@@ -65,7 +65,7 @@ public class StarshipController {
      * @param id The id of the starship we are modifying (integer greater than 0)
      * @param starship The Starship entity with the attribute values we want to override. Found in request body (model.Starship)
      * @throws BadRequestException Exception thrown for custom request body validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     @PutMapping("/{id}")
     public void updateById(@PathVariable @NotNull @Min(1) int id, @Valid @RequestBody Starship starship)
@@ -76,7 +76,7 @@ public class StarshipController {
     /** Handler for put / request
      * @param starship The Starship entity with the attribute values we want to override. Found in request body (model.Starship)
      * @throws BadRequestException Exception thrown for custom request body validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     @PutMapping
     public void update(@Valid @RequestBody Starship starship) throws BadRequestException, ConflictException {

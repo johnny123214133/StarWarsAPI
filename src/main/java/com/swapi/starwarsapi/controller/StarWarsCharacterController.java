@@ -27,7 +27,7 @@ public class StarWarsCharacterController {
     /** Handler for post / request
      * @param character The character entity we are persisting (model.StarWarsCharacter)
      * @throws BadRequestException Exception thrown for custom request body validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
@@ -64,7 +64,7 @@ public class StarWarsCharacterController {
     /** Handler for put / request
      * @param character The StarWarsCharacter entity with the attribute values we want to override. Found in request body (model.StarWarsCharacter)
      * @throws BadRequestException Exception thrown for custom request body validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     @PutMapping
     public void updateByName(@Valid @RequestBody StarWarsCharacter character) throws BadRequestException, ConflictException {
@@ -75,7 +75,7 @@ public class StarWarsCharacterController {
      * @param id The id of the character we are modifying (integer greater than 0)
      * @param character The StarWarsCharacter entity with the attribute values we want to override. Found in request body (model.StarWarsCharacter)
      * @throws BadRequestException Exception thrown for custom request body validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     @PutMapping("/{id}")
     public void updateById(@PathVariable @NotNull @Min(1) int id,

@@ -21,7 +21,7 @@ public class StarshipService {
     /** Service for creating a new Starship
      * @param starship Starship we want to persist
      * @throws BadRequestException Exception thrown for custom validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     public void save(Starship starship) throws BadRequestException, ConflictException {
         // I want to intercept records with duplicate names.
@@ -61,7 +61,7 @@ public class StarshipService {
      * @param id id of Starship we want to modify
      * @param starship Starship that contains the data we want to modify
      * @throws BadRequestException Exception thrown for custom validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     public void updateById(Integer id, Starship starship) throws BadRequestException, ConflictException {
         // My 409 error is more appropriate than the auto-generated 500 error.
@@ -76,7 +76,7 @@ public class StarshipService {
     /** Service for updating Starship by name
      * @param starship Starship that contains the data we want to modify
      * @throws BadRequestException Exception thrown for custom validation
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     public void updateByName(Starship starship) throws BadRequestException, ConflictException {
         // My 409 error is more appropriate than the auto-generated 500 error.

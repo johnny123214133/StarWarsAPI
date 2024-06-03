@@ -25,7 +25,7 @@ public class PlanetController {
 
     /** Handler for post / request
      * @param planet The planet entity we are persisting (model.Planet)
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
@@ -62,7 +62,7 @@ public class PlanetController {
     /** Handler for put /{id} request
      * @param id The id of the planet we are modifying (integer greater than 0)
      * @param planet The Planet entity with the attribute values we want to override. Found in request body (model.Planet)
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     @PutMapping("/{id}")
     public void update(@PathVariable @NotNull @Min(1) int id, @Valid @RequestBody Planet planet) throws ConflictException {
@@ -71,7 +71,7 @@ public class PlanetController {
 
     /** Handler for put / request
      * @param planet The Planet entity with the attribute values we want to override. Found in request body (model.Planet)
-     * @throws ConflictException Custom exception and http response that obfuscates some internal server errors on duplicate or missing records
+     * @throws ConflictException Custom exception and http response that obscures some internal server errors on duplicate or missing records
      */
     @PutMapping
     public void update(@Valid @RequestBody Planet planet) throws ConflictException {
