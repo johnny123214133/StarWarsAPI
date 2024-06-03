@@ -1,5 +1,6 @@
 package com.swapi.starwarsapi.controller.errors;
 
+import com.swapi.starwarsapi.exceptions.ConflictException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,13 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleValidationErrors(MethodArgumentNotValidException ex) {
         List<String> messages = ex.getBindingResult().getFieldErrors()
                 .stream().map(FieldError::getDefaultMessage).collect(Collectors.toList());
+        HttpStatus status = HttpStatus.BAD_REQUEST;
+        return new ResponseEntity<>(new ErrorResponse(status, messages), new HttpHeaders(), status);
+    }
+
+    @ExceptionHandler(ConflictException.class)
+    public ResponseEntity<ErrorResponse> handleDataConflictErrors(ConflictException ex) {
+        List<String> messages = List.of(ex.getMessage());
         HttpStatus status = HttpStatus.BAD_REQUEST;
         return new ResponseEntity<>(new ErrorResponse(status, messages), new HttpHeaders(), status);
     }
