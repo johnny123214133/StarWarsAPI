@@ -1,10 +1,7 @@
 package com.swapi.starwarsapi.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.*;
 
 import java.util.Objects;
 
@@ -15,10 +12,12 @@ public class Planet {
     private int id;
 
     @NotBlank(message="name cannot be blank")
+    @Size(max=255, message="name cannot be more than 255 characters long")
     @Column(nullable=false, unique=true)
     private String name;
 
     @NotBlank(message="climate cannot be blank")
+    @Size(max=255, message="climate cannot be more than 255 characters long")
     private String climate;
 
     @NotNull(message="population cannot be null")

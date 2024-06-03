@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import org.hibernate.annotations.ColumnTransformer;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
@@ -18,6 +19,7 @@ public class StarWarsCharacter {
 
     @Column(nullable=false, unique=true)
     @NotBlank(message="name cannot be blank")
+    @Size(max=255, message="name cannot be more than 255 characters long")
     private String name;
 
     @ManyToOne(targetEntity = Planet.class, fetch=FetchType.LAZY)

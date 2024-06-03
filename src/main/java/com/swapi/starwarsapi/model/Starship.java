@@ -3,6 +3,7 @@ package com.swapi.starwarsapi.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.util.Objects;
 
@@ -16,9 +17,11 @@ public class Starship {
 
     @NotBlank(message="name cannot be blank, empty, or null")
     @Column(nullable=false, unique=true)
+    @Size(max=255, message="name cannot be more than 255 characters long")
     private String name;
 
     @NotBlank(message="model cannot be blank, empty, or null")
+    @Size(max=255, message="model cannot be more than 255 characters long")
     private String model;
 
     // I couldn't get the money type to work,
