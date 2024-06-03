@@ -9,7 +9,6 @@ import java.util.Objects;
 
 @Entity(name = "starship_master")
 public class Starship {
-    private static final double MONEY_MAX_VALUE = 92233720368547758.07;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
